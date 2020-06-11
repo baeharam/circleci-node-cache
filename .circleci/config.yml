@@ -17,6 +17,8 @@ jobs:
     <<: *node
     steps:
       - checkout
+      - node/install-packages:
+          cache-path: ~/project/cache-path
       - run:
           name: Build
           command: yarn build
