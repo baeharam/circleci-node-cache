@@ -12,6 +12,10 @@ node: &node
 orbs:
   node: circleci/node@3.0.0
 
+parameters:
+  install-npm: false
+  install-yarn: true
+
 jobs:
   build:
     <<: *node
