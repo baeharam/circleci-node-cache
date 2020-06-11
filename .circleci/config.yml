@@ -10,7 +10,7 @@ node: &node
 
 
 orbs:
-  node: circleci/node@1.1.6
+  node: circleci/node@3.0.0
 
 jobs:
   build:
