@@ -12,15 +12,13 @@ node: &node
 orbs:
   node: circleci/node@3.0.0
 
-parameters:
-  install-npm: false
-  install-yarn: true
-
 jobs:
   build:
     <<: *node
     steps:
       - checkout
+      - node/install:
+          install-yarn: true
       - node/install-packages:
           pkg-manager: yarn
           app-dir: ~/baeharam/circleci-node-cache
