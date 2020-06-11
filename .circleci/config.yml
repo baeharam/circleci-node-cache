@@ -18,6 +18,7 @@ jobs:
     steps:
       - checkout
       - node/install-packages:
+          pkg-manager: yarn
           app-dir: ~/baeharam/circleci-node-cache
           cache-path: ~/baeharam/circleci-node-cache
       - run:
