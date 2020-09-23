@@ -19,12 +19,12 @@ jobs:
       - checkout
       - node/install-packages:
           pkg-manager: yarn
-          app-dir: ~/baeharam/circleci-node-cache
-          cache-version: v2
-          include-branch-in-cache-key: false
+          app-dir: ./
       - run:
-          name: Build
-          command: yarn build
+          name: Test timezone
+          command: |
+            yarn
+            node ./src/index.js
 
 workflows:
   version: 2
